@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Simon - DanCodes - CodeInstitute</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/simon.css">
+
+    <audio id="green-snd">
+  	<source src="assets/sounds/zapsplat_sound1.mp3"></source>
+  </audio>
+    <audio id="red-snd">
+  	<source src="assets/sounds/zapsplat_sound2.mp3"></source>
+  </audio>
+    <audio id="yellow-snd">
+  	<source src="assets/sounds/zapsplat_sound3.mp3"></source>
+  </audio>
+    <audio id="blue-snd">
+  	<source src="assets/sounds/zapsplat_sound4.mp3"></source>
+  </audio>
+</head>
+
+<body>
+
+    <div id="border-circle">
+        <div id="green-btn"></div>
+        <div id="red-btn"></div>
+        <div id="yellow-btn"></div>
+        <div id="blue-btn"></div>
+        <div id="orange-circle">
+            <div id="simon" class="font-effect-emboss">SIMON</div>
+            <div id="start-button-div">
+                <button class="start-button" id="start">Start</button>
+            </div>
+            <div id="turn"></div>
+            <div class="level-text">
+                LEVEL
+            </div>
+        </div>
+    </div>
+
+    <div class="instructions tac cap">
+        <h2>Instructions</h2>
+        <p>This is a game of Simon!</p>
+        <p>To play Simon, press start and click or tap the colours that light up after Simon has finished his turn.</p>
+        <p>(You will know he is finished once the colours stop flashing!)</p>
+        <p>You MUST click them in order, or you will be reset to Level 1...</p>
+        <p>Good luck... you win after Level 20!</p>
+        
+        <h3>Credits</h3>
+        <p>A Game Of Simon, developed by Daniel Armstrong...</p> 
+        <p>for a CodeInstitute Milestone Project.</p>
+        <a href="https://www.dancodes.co.uk" target="_blank"><div id="dancodes" class="center"></div></a>
+    </div>
+
+    <script src="assets/js/simon.js"></script>
+
+</body>
+
+</html>
