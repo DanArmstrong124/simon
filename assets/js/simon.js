@@ -224,7 +224,8 @@ function verify() {
         setTimeout(function() {
             turnOnScreen.innerHTML = turn;
             clearColor();
-            play();
+            timeRunning = false;
+            emailSequence();
         }, 800);
 
         sound = false;
