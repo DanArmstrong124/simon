@@ -7,6 +7,7 @@ var simonTurn;
 var intervalId;
 var sound = true;
 var gameWon;
+var userPlaying = false;
 
 const turnOnScreen = document.querySelector("#turn");
 const grnBtn = document.querySelector("#green-btn");
@@ -42,6 +43,7 @@ function gameTurn() {
         clearInterval(intervalId);
         simonTurn = false;
         clearColor();
+        userPlaying = true;
     }
 
     if (simonTurn) {
@@ -107,48 +109,57 @@ function colourFlashColor() {
 }
 
 grnBtn.addEventListener('click', function() {
-    userSequence.push(1);
-    verify();
-    greenSound();
-    if (!gameWon) {
-        setTimeout(() => {
-            clearColor();
-        }, 300);
+    if (userPlaying) {
+        userSequence.push(1);
+        verify();
+        greenSound();
+        if (!gameWon) {
+            setTimeout(() => {
+                clearColor();
+            }, 300);
+        }
     }
 })
 
 redBtn.addEventListener('click', function() {
-    userSequence.push(2);
-    verify();
-    redSound();
-    if (!gameWon) {
-        setTimeout(() => {
-            clearColor();
-        }, 300);
+    if (userPlaying) {
+        userSequence.push(2);
+        verify();
+        redSound();
+        if (!gameWon) {
+            setTimeout(() => {
+                clearColor();
+            }, 300);
+        }
     }
 })
 
 ylwBtn.addEventListener('click', function() {
-    userSequence.push(3);
-    verify();
-    yellowSound();
-    if (!gameWon) {
-        setTimeout(() => {
-            clearColor();
-        }, 300);
+    if (userPlaying) {
+        userSequence.push(3);
+        verify();
+        yellowSound();
+        if (!gameWon) {
+            setTimeout(() => {
+                clearColor();
+            }, 300);
+        }
     }
 })
 
 bluBtn.addEventListener('click', function() {
-    userSequence.push(4);
-    verify();
-    blueSound();
-    if (!gameWon) {
-        setTimeout(() => {
-            clearColor();
-        }, 300);
+    if (userPlaying) {
+        userSequence.push(4);
+        verify();
+        blueSound();
+        if (!gameWon) {
+            setTimeout(() => {
+                clearColor();
+            }, 300);
+        }
     }
 })
+
 
 function verify() {
     if (userSequence[userSequence.length - 1] !== simonSequence[userSequence.length - 1])
@@ -173,6 +184,7 @@ function verify() {
     if (turn == userSequence.length && correct && !gameWon) {
         turn++;
         userSequence = [];
+        userPlaying = false;
         simonTurn = true;
         colourFlash = 0;
         turnOnScreen.innerHTML = turn;
@@ -184,6 +196,6 @@ function verify() {
 function winnerFunction() {
     colourFlashColor();
     turnOnScreen.innerHTML = "WIN";
-    on = false;
+    userPlaying = false;
     gameWon = true;
 }
