@@ -8,6 +8,12 @@ var intervalId;
 var sound = true;
 var gameWon;
 var userPlaying = false;
+var firstClick = true;
+var creditsToggle = true;
+var instructionsToggle = true;
+var time = 0;
+var timeRunning = true;
+
 
 const turnOnScreen = document.querySelector("#turn");
 const grnBtn = document.querySelector("#green-btn");
@@ -15,9 +21,52 @@ const redBtn = document.querySelector("#red-btn");
 const ylwBtn = document.querySelector("#yellow-btn");
 const bluBtn = document.querySelector("#blue-btn");
 const startBtn = document.querySelector("#start");
+const creditBtn = document.querySelector("#credits-button");
+const instructionsBtn = document.querySelector("#instructions-button");
+const credits = document.querySelector("#credits");
+const instructions = document.querySelector("#instructions");
+const scoreForm = document.querySelector("#scoreForm");
+
+creditBtn.addEventListener('click', function() {
+    if (creditsToggle == true && instructionsToggle != false) {
+        credits.classList.add("visable")
+        creditBtn.innerHTML = "Hide Credits";
+        creditsToggle = false;
+    }
+    else if (creditsToggle == false) {
+        credits.classList.remove('visable');
+        creditBtn.innerHTML = "Credits";
+        creditsToggle = true;
+    }
+});
+
+
+instructionsBtn.addEventListener('click', function() {
+    if (instructionsToggle == true && creditsToggle != false) {
+        instructions.classList.add('visable');
+        instructionsBtn.innerHTML = "Hide Instructions";
+        instructionsToggle = false;
+    }
+    else if (instructionsToggle == false) {
+        instructions.classList.remove('visable');
+        instructionsBtn.innerHTML = "Instructions";
+        instructionsToggle = true;
+    }
+});
 
 startBtn.addEventListener('click', function() {
-    play();
+    if (firstClick || userPlaying == true) {
+        if (firstClick == true) {
+            setInterval(function() {
+                if (timeRunning = true) {
+                    time++;
+                }
+            }, 1000);
+            firstClick = false;
+        }
+        startBtn.innerHTML = "Retry";
+        play();
+    }
 });
 
 function play() {
@@ -198,4 +247,12 @@ function winnerFunction() {
     turnOnScreen.innerHTML = "WIN";
     userPlaying = false;
     gameWon = true;
+    timeRunning = false;
+    emailSequence();
+}
+
+function emailSequence() {
+    scoreForm.classList.add("visable");
+    document.getElementById("turns").setAttribute('value', turn);
+    document.getElementById("time").setAttribute('value', time);
 }
