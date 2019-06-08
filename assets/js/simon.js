@@ -259,5 +259,6 @@ function emailSequence() {
     scoreForm.classList.add("visable");
     document.getElementById("turns").setAttribute('value', turn);
     document.getElementById("time").setAttribute('value', time);
+    totalScore = totalScore | 0;
     document.getElementById("total").setAttribute('value', totalScore);
 }
