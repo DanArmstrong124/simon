@@ -394,3 +394,13 @@ body {
         color: black !important;
     }
 }
+
+@media(max-width: 321px) {
+    .start-button {
+        border-radius: 30% !important;
+        margin-left: 48px;
+        font-size: 1em;
+        background-color: white;
+        color: black !important;
+    }
+}
