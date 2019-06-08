@@ -5,7 +5,7 @@ function sendMail(contactForm) {
             "from_email": contactForm.email.value,
             "user_score": contactForm.turns.value,
             "time": contactForm.time.value,
-            "total_score": contactForm.total.value,
+            "total": contactForm.total.value,
         })
         .then(
             function(response) {
