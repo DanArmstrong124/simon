@@ -13,6 +13,7 @@ var creditsToggle = true;
 var instructionsToggle = true;
 var time = 0;
 var timeRunning = true;
+var totalScore;
 
 
 const turnOnScreen = document.querySelector("#turn");
@@ -225,6 +226,7 @@ function verify() {
             turnOnScreen.innerHTML = turn;
             clearColor();
             timeRunning = false;
+            totalScore = turn / time * 100;
             emailSequence();
         }, 800);
 
@@ -249,6 +251,7 @@ function winnerFunction() {
     userPlaying = false;
     gameWon = true;
     timeRunning = false;
+    totalScore = turn / time * 100;
     emailSequence();
 }
 
@@ -256,4 +259,5 @@ function emailSequence() {
     scoreForm.classList.add("visable");
     document.getElementById("turns").setAttribute('value', turn);
     document.getElementById("time").setAttribute('value', time);
+    document.getElementById("total").setAttribute('value', totalScore);
 }
