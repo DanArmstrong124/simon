@@ -1,7 +1,7 @@
 var simonSequence = [];
 var userSequence = [];
 var colourFlash;
-var turn;
+var turn = 0;
 var correct;
 var simonTurn;
 var intervalId;
@@ -32,17 +32,17 @@ const scoreForm = document.querySelector("#scoreForm");
 const highscoreOnScreen = document.querySelector("#highscoreOnScreen");
 const highscoreInfoButton = document.querySelector("#highscore-info-button");
 const highscoreInfo = document.querySelector("#highscore-info");
-const highscoreInfoAlgorithm = document.querySelector("#highscore-info-algorithm");
 
 highscoreInfoButton.addEventListener('click', function() {
     if (highscoreInfoToggle == true) {
         highscoreInfo.classList.add("visable");
-        highscoreInfoAlgorithm.classList.add("visable");
         highscoreInfoToggle = false;
+        setInterval(function() {
+            highscoreInfo.innerHTML = "Turn " + turn + " ÷ " + time + " Seconds x 100";
+        }, 1000);
     }
     else if (highscoreInfoToggle == false) {
         highscoreInfo.classList.remove("visable");
-        highscoreInfoAlgorithm.classList.remove("visable");
         highscoreInfoToggle = true;
     }
 });
@@ -78,7 +78,7 @@ startBtn.addEventListener('click', function() {
     if (firstClick || userPlaying == true) {
         if (firstClick == true) {
             setInterval(function() {
-                if (timeRunning = true) {
+                if (timeRunning == true) {
                     time++;
                 }
             }, 1000);
@@ -255,6 +255,7 @@ function verify() {
 
     if (turn == userSequence.length && correct && !gameWon) {
         turn++;
+        highscoreInfo.innerHTML = "Turn " + turn + " / " + time + " * 100";
         userSequence = [];
         userPlaying = false;
         simonTurn = true;
