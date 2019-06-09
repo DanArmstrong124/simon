@@ -15,6 +15,7 @@ var time = 0;
 var timeRunning = true;
 var totalScore;
 var highScore = 0;
+var highscoreInfoToggle = true;
 
 
 const turnOnScreen = document.querySelector("#turn");
@@ -29,6 +30,22 @@ const credits = document.querySelector("#credits");
 const instructions = document.querySelector("#instructions");
 const scoreForm = document.querySelector("#scoreForm");
 const highscoreOnScreen = document.querySelector("#highscoreOnScreen");
+const highscoreInfoButton = document.querySelector("#highscore-info-button");
+const highscoreInfo = document.querySelector("#highscore-info");
+const highscoreInfoAlgorithm = document.querySelector("#highscore-info-algorithm");
+
+highscoreInfoButton.addEventListener('click', function() {
+    if (highscoreInfoToggle == true) {
+        highscoreInfo.classList.add("visable");
+        highscoreInfoAlgorithm.classList.add("visable");
+        highscoreInfoToggle = false;
+    }
+    else if (highscoreInfoToggle == false) {
+        highscoreInfo.classList.remove("visable");
+        highscoreInfoAlgorithm.classList.remove("visable");
+        highscoreInfoToggle = true;
+    }
+});
 
 creditBtn.addEventListener('click', function() {
     if (creditsToggle == true && instructionsToggle != false) {

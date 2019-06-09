@@ -222,6 +222,16 @@ body {
     -webkit-box-sizing: border-box;
 }
 
+.highscore-info {
+    color: black;
+    transition: ease-in-out 0.5s;
+}
+
+.highscore-info:hover {
+    color: red;
+    transition: ease-in-out 0.5s;
+}
+
 @media(max-width: 536px) {
     #dancodes {
         background-image: url(../images/dancodes.png);
