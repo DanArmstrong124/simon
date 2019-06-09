@@ -14,6 +14,7 @@ var instructionsToggle = true;
 var time = 0;
 var timeRunning = true;
 var totalScore;
+var highScore = 0;
 
 
 const turnOnScreen = document.querySelector("#turn");
@@ -27,6 +28,7 @@ const instructionsBtn = document.querySelector("#instructions-button");
 const credits = document.querySelector("#credits");
 const instructions = document.querySelector("#instructions");
 const scoreForm = document.querySelector("#scoreForm");
+const highscoreOnScreen = document.querySelector("#highscoreOnScreen");
 
 creditBtn.addEventListener('click', function() {
     if (creditsToggle == true && instructionsToggle != false) {
@@ -79,6 +81,7 @@ function play() {
     turn = 1;
     turnOnScreen.innerHTML = 1;
     correct = true;
+    time = 0;
     for (var i = 0; i < 20; i++) {
         simonSequence.push(Math.floor(Math.random() * 4) + 1);
     }
@@ -261,4 +264,12 @@ function emailSequence() {
     document.getElementById("time").setAttribute('value', time);
     totalScore = totalScore | 0;
     document.getElementById("total").setAttribute('value', totalScore);
+    highScoreChecker();
+}
+
+function highScoreChecker() {
+    if (totalScore > highScore) {
+        highScore = totalScore;
+        highscoreOnScreen.innerHTML = highScore;
+    }
 }
