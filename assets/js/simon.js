@@ -94,6 +94,7 @@ startBtn.addEventListener('click', function() {
             firstClick = false;
         }
         startBtn.innerHTML = "Retry";
+        colourClicks = 0;
         play();
     }
 });
@@ -259,7 +260,7 @@ function verify() {
             turnOnScreen.innerHTML = turn;
             clearColor();
             timeRunning = false;
-            totalScore = turn / time * 100;
+            totalScore = (turn + colourClicks) / time * 100;
             emailSequence();
         }, 800);
 
@@ -268,7 +269,7 @@ function verify() {
 
     if (turn == userSequence.length && correct && !gameWon) {
         turn++;
-        highscoreInfo.innerHTML = "Turn " + turn + " / " + time + " * 100";
+        highscoreInfo.innerHTML = "Turn " + turn + " + " + colourClicks + " Clicks ÷ " + time + " Seconds x 100";
         userSequence = [];
         userPlaying = false;
         simonTurn = true;
