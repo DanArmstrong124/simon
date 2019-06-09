@@ -16,6 +16,7 @@ var timeRunning = true;
 var totalScore;
 var highScore = 0;
 var highscoreInfoToggle = true;
+var colourClicks = 0;
 
 
 const turnOnScreen = document.querySelector("#turn");
@@ -38,7 +39,7 @@ highscoreInfoButton.addEventListener('click', function() {
         highscoreInfo.classList.add("visable");
         highscoreInfoToggle = false;
         setInterval(function() {
-            highscoreInfo.innerHTML = "Turn " + turn + " ÷ " + time + " Seconds x 100";
+            highscoreInfo.innerHTML = "Turn " + turn + " + " + colourClicks + " Clicks ÷ " + time + " Seconds x 100";
         }, 1000);
     }
     else if (highscoreInfoToggle == false) {
@@ -77,6 +78,14 @@ instructionsBtn.addEventListener('click', function() {
 startBtn.addEventListener('click', function() {
     if (firstClick || userPlaying == true) {
         if (firstClick == true) {
+            setInterval(function() {
+                if (simonTurn == true) {
+                    timeRunning = false;
+                }
+                else if (simonTurn == false && correct == true && gameWon != true) {
+                    timeRunning = true;
+                }
+            }, 100);
             setInterval(function() {
                 if (timeRunning == true) {
                     time++;
@@ -183,6 +192,7 @@ grnBtn.addEventListener('click', function() {
         userSequence.push(1);
         verify();
         greenSound();
+        colourClicks++;
         if (!gameWon) {
             setTimeout(() => {
                 clearColor();
@@ -196,6 +206,7 @@ redBtn.addEventListener('click', function() {
         userSequence.push(2);
         verify();
         redSound();
+        colourClicks++;
         if (!gameWon) {
             setTimeout(() => {
                 clearColor();
@@ -209,6 +220,7 @@ ylwBtn.addEventListener('click', function() {
         userSequence.push(3);
         verify();
         yellowSound();
+        colourClicks++;
         if (!gameWon) {
             setTimeout(() => {
                 clearColor();
@@ -222,6 +234,7 @@ bluBtn.addEventListener('click', function() {
         userSequence.push(4);
         verify();
         blueSound();
+        colourClicks++;
         if (!gameWon) {
             setTimeout(() => {
                 clearColor();
