@@ -8,4 +8,3 @@ COMPLETE README.md
 
 ADD Difficulties
 ADD Feedback Button
-ADD mute button
