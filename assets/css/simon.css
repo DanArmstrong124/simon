@@ -4,6 +4,31 @@ body {
     background-image: url(../images/wood-background.jpg)
 }
 
+/*HIGHSCORE CLASSES*/
+
+.high-score-title-font {
+    font-size: 18px;
+}
+
+.highscore-info {
+    font-size: 18px;
+}
+
+.high-score-score-font {
+    font-size: 18px;
+    display: inline;
+}
+
+/*---*/
+
+.level-box-after-start {
+    margin-top: 135px !important;
+}
+
+.level-box-text-after-start {
+    margin-top: 108px !important;
+}
+
 .visable {
     display: block !important;
 }
@@ -104,12 +129,14 @@ body {
     margin-top: 28px;
 }
 
+/*d8d8d8*/
+
 #turn {
     position: absolute;
-    background: #d8d8d8;
-    color: red;
+    background: #ff6f00;
+    color: black;
     font-family: courier;
-    font-size: 20px;
+    font-size: 40px;
     height: 30px;
     width: 50px;
     margin-left: 90px;
@@ -277,10 +304,10 @@ body {
 
     #turn {
         position: absolute;
-        background: #d8d8d8;
-        color: red;
+        background: #ff6f00;
+        color: black;
         font-family: courier;
-        font-size: 15px;
+        font-size: 40px;
         height: 30px;
         width: 30px;
         margin-left: 38px;
@@ -403,14 +430,41 @@ body {
         background-color: white;
         color: black !important;
     }
+    .level-box-after-start {
+        margin-top: 35px !important;
+    }
+
+    .level-box-text-after-start {
+        margin-top: 65px !important;
+    }
+    
+    .high-score-title-font {
+        font-size: 18px;
+    }
+
+    .highscore-info {
+        font-size: 18px;
+    }
+
+    .high-score-score-font {
+        font-size: 18px;
+        display: inline;
+    }
 }
 
 @media(max-width: 321px) {
     .start-button {
         border-radius: 30% !important;
-        margin-left: 48px;
+        margin-left: 55px;
         font-size: 1em;
         background-color: white;
         color: black !important;
+    }
+    .level-box-after-start {
+        margin-top: 35px !important;
+    }
+
+    .level-box-text-after-start {
+        margin-top: 65px !important;
     }
 }

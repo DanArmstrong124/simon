@@ -20,6 +20,7 @@ var colourClicks = 0;
 
 
 const turnOnScreen = document.querySelector("#turn");
+const turnText = document.querySelector("#turn-text");
 const grnBtn = document.querySelector("#green-btn");
 const redBtn = document.querySelector("#red-btn");
 const ylwBtn = document.querySelector("#yellow-btn");
@@ -94,6 +95,9 @@ startBtn.addEventListener('click', function() {
             firstClick = false;
         }
         startBtn.innerHTML = "Retry";
+        startBtn.classList.add("hidden");
+        turnOnScreen.classList.add("level-box-after-start");
+        turnText.classList.add("level-box-text-after-start");
         colourClicks = 0;
         play();
     }
@@ -292,10 +296,10 @@ function winnerFunction() {
 
 function emailSequence() {
     scoreForm.classList.add("visable");
-    document.getElementById("turns").setAttribute('value', turn);
-    document.getElementById("time").setAttribute('value', time);
+    document.getElementById("turns").setAttribute('value', "turn " + turn);
+    document.getElementById("time").setAttribute('value', time + " seconds");
     totalScore = totalScore | 0;
-    document.getElementById("total").setAttribute('value', totalScore);
+    document.getElementById("total").setAttribute('value', totalScore + " score");
     highScoreChecker();
 }
 
@@ -303,5 +307,8 @@ function highScoreChecker() {
     if (totalScore > highScore) {
         highScore = totalScore;
         highscoreOnScreen.innerHTML = highScore;
+        startBtn.classList.remove("hidden");
+        turnOnScreen.classList.remove("level-box-after-start");
+        turnText.classList.remove("level-box-text-after-start");
     }
 }
