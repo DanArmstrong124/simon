@@ -20,6 +20,7 @@ var highscoreInfoToggle = true;
 var colourClicks = 0;
 var muteToggle = true;
 var playAudio = true;
+var difWhenPlaying;
 
 
 const turnOnScreen = document.querySelector("#turn");
@@ -40,6 +41,7 @@ const highscoreInfo = document.querySelector("#highscore-info");
 const yourTurn = document.querySelector("#your-turn");
 const simonsTurn = document.querySelector("#simons-turn");
 const muteBtn = document.querySelector("#mute-button");
+const difSelect = document.querySelector("#difficulty");
 
 muteBtn.addEventListener('click', function() {
     if (muteToggle == true) {
@@ -70,10 +72,13 @@ highscoreInfoButton.addEventListener('click', function() {
 });
 
 creditBtn.addEventListener('click', function() {
-    if (creditsToggle == true && instructionsToggle != false) {
+    if (creditsToggle == true) {
         credits.classList.add("visable");
         creditBtn.innerHTML = "Hide Credits";
         creditsToggle = false;
+        instructionsToggle = true;
+        instructions.classList.remove('visable');
+        instructionsBtn.innerHTML = "Instructions";
     }
     else if (creditsToggle == false) {
         credits.classList.remove('visable');
@@ -84,10 +89,13 @@ creditBtn.addEventListener('click', function() {
 
 
 instructionsBtn.addEventListener('click', function() {
-    if (instructionsToggle == true && creditsToggle != false) {
+    if (instructionsToggle == true) {
         instructions.classList.add('visable');
         instructionsBtn.innerHTML = "Hide Instructions";
         instructionsToggle = false;
+        creditsToggle = true;
+        credits.classList.remove('visable');
+        creditBtn.innerHTML = "Credits";
     }
     else if (instructionsToggle == false) {
         instructions.classList.remove('visable');
@@ -97,6 +105,17 @@ instructionsBtn.addEventListener('click', function() {
 });
 
 startBtn.addEventListener('click', function() {
+    if (difSelect.value == "SELECT DIFFICULTY") {
+        difSelect.value = "NORMAL";
+    }
+    difWhenPlaying = difSelect.value;
+    if (difWhenPlaying == "EASY") {
+        easyMode();
+    }
+    if (difWhenPlaying != "EASY") {
+        bluBtn.classList.remove("darkoutblue");
+        ylwBtn.classList.remove("darkoutyellow");
+    }
     if (firstClick || userPlaying == true) {
         if (firstClick == true) {
             setInterval(function() {
@@ -137,8 +156,25 @@ function play() {
     turnOnScreen.innerHTML = 1;
     correct = true;
     time = 0;
-    for (var i = 0; i < 20; i++) {
-        simonSequence.push(Math.floor(Math.random() * 4) + 1);
+    if (difWhenPlaying == "EASY") {
+        for (var i = 0; i < 10; i++) {
+            simonSequence.push(Math.floor(Math.random() * 2) + 1);
+        }
+    }
+    if (difWhenPlaying == "NORMAL") {
+        for (var i = 0; i < 20; i++) {
+            simonSequence.push(Math.floor(Math.random() * 4) + 1);
+        }
+    }
+    if (difWhenPlaying == "HARD") {
+        for (var i = 0; i < 50; i++) {
+            simonSequence.push(Math.floor(Math.random() * 4) + 1);
+        }
+    }
+    if (difWhenPlaying == "EXTREME") {
+        for (var i = 0; i < 100; i++) {
+            simonSequence.push(Math.floor(Math.random() * 4) + 1);
+        }
     }
     simonTurn = true;
 
@@ -255,7 +291,7 @@ redBtn.addEventListener('click', function() {
 });
 
 ylwBtn.addEventListener('click', function() {
-    if (userPlaying == true && gameStillOn == true) {
+    if (userPlaying == true && gameStillOn == true && difWhenPlaying != "EASY") {
         userSequence.push(3);
         verify();
         yellowSound();
@@ -269,7 +305,7 @@ ylwBtn.addEventListener('click', function() {
 });
 
 bluBtn.addEventListener('click', function() {
-    if (userPlaying == true && gameStillOn == true) {
+    if (userPlaying == true && gameStillOn == true && difWhenPlaying != "EASY") {
         userSequence.push(4);
         verify();
         blueSound();
@@ -286,9 +322,25 @@ bluBtn.addEventListener('click', function() {
 function verify() {
     if (userSequence[userSequence.length - 1] !== simonSequence[userSequence.length - 1])
         correct = false;
-
-    if (userSequence.length == 20 && correct) {
-        winnerFunction();
+    if (difWhenPlaying == "EASY") {
+        if (userSequence.length == 10 && correct) {
+            winnerFunction();
+        }
+    }
+    if (difWhenPlaying == "NORMAL") {
+        if (userSequence.length == 20 && correct) {
+            winnerFunction();
+        }
+    }
+    if (difWhenPlaying == "HARD") {
+        if (userSequence.length == 50 && correct) {
+            winnerFunction();
+        }
+    }
+    if (difWhenPlaying == "EXTREME") {
+        if (userSequence.length == 100 && correct) {
+            winnerFunction();
+        }
     }
 
     if (correct == false) {
@@ -350,6 +402,7 @@ function emailSequence() {
     document.getElementById("time").setAttribute('value', time + " seconds");
     totalScore = totalScore | 0;
     document.getElementById("total").setAttribute('value', totalScore + " score");
+    document.getElementById("difficultyemail").setAttribute('value', "Difficulty:" + difWhenPlaying);
     highScoreChecker();
 }
 
@@ -369,4 +422,9 @@ function userSimonTurnText() {
         yourTurn.classList.add("visable");
         simonsTurn.classList.remove("visable");
     }
+}
+
+function easyMode() {
+    bluBtn.classList.add("darkoutblue");
+    ylwBtn.classList.add("darkoutyellow");
 }

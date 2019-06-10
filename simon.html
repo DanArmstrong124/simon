@@ -39,6 +39,16 @@
         <h4 id="highscore-info" class="hidden high-score-algo-font">Total Clicks</h4>
     </div>
 
+    <div class="difficulty center">
+        <select name="difficulty" id="difficulty" class="difficulty-dropdown">
+            <option disabled selected>SELECT DIFFICULTY</option>
+            <option>EASY</option>
+            <option>NORMAL</option>
+            <option>HARD</option>
+            <option>EXTREME</option>
+        </select>
+    </div>
+
     <div id="border-circle">
         <div id="green-btn"></div>
         <div id="red-btn"></div>
@@ -67,6 +77,7 @@
         <input type="text" name="turns" class="form-control form-input" id="turns" placeholder="turns" disabled required/>
         <input type="text" name="time" class="form-control form-input" id="time" placeholder="time" disabled required/>
         <input type="text" name="total" class="form-control form-input" id="total" placeholder="total" disabled required/>
+        <input type="text" name="difficultyemail" class="form-control form-input" id="difficultyemail" placeholder="difficultyemail" disabled required/>
         <button type="submit" class="submit-button">Send Score!</button>
     </form>
 

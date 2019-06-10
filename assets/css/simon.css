@@ -4,6 +4,14 @@ body {
     background-image: url(../images/wood-background.jpg)
 }
 
+.darkoutyellow {
+    background-color: rgba(218, 165, 32, 0.54) !important;
+}
+
+.darkoutblue {
+    background-color: rgba(26, 26, 49, 1) !important;
+}
+
 #dancodes {
     width: 200px;
     height: 200px;
@@ -114,7 +122,7 @@ body {
 .instruct-button {
     font-size: 1.5em;
     color: black !important;
-    width: 50%;
+    width: 40%;
     display: inline;
     background-color: rgba(255, 255, 255, 0.2);
     transition: ease-in-out 1s;
@@ -126,7 +134,7 @@ body {
 .credit-button {
     font-size: 1.5em;
     color: black !important;
-    width: 50%;
+    width: 40%;
     display: inline;
     background-color: rgba(255, 255, 255, 0.2);
     transition: ease-in-out 1s;
@@ -517,7 +525,7 @@ body {
     .instruct-button {
         font-size: 1em;
         color: black !important;
-        width: 50%;
+        width: 40%;
         display: inline;
         background-color: rgba(255, 255, 255, 0.2);
         transition: ease-in-out 1s;
@@ -529,7 +537,7 @@ body {
     .credit-button {
         font-size: 1em;
         color: black !important;
-        width: 50%;
+        width: 40%;
         display: inline;
         background-color: rgba(255, 255, 255, 0.2);
         transition: ease-in-out 1s;
