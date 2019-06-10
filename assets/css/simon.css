@@ -20,6 +20,7 @@ body {
     position: fixed;
     bottom: 50px;
     left: 50px;
+    font-size: 50px;
 }
 
 /*HIGHSCORE CLASSES*/
@@ -108,17 +109,6 @@ body {
     font-size: 1.5em;
     background-color: white;
     color: black !important;
-}
-
-#dancodes {
-    background-image: url(../images/dancodes.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 200px;
-    height: 200px;
-    margin-top: 50px;
-    border: 1px solid black;
-    border-radius: 50%;
 }
 
 .start-button {
@@ -283,9 +273,6 @@ body {
 
 @media(max-width: 536px) {
     #dancodes {
-        background-image: url(../images/dancodes.png);
-        background-repeat: no-repeat;
-        background-size: contain;
         width: 150px;
         height: 150px;
         margin-top: 50px;
@@ -488,6 +475,7 @@ body {
         position: fixed;
         bottom: 10px;
         left: 10px;
+        font-size: 20px;
     }
 }
 
