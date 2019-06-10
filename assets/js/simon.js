@@ -17,6 +17,8 @@ var totalScore;
 var highScore = 0;
 var highscoreInfoToggle = true;
 var colourClicks = 0;
+var muteToggle = true;
+var playAudio = true;
 
 
 const turnOnScreen = document.querySelector("#turn");
@@ -34,6 +36,26 @@ const scoreForm = document.querySelector("#scoreForm");
 const highscoreOnScreen = document.querySelector("#highscoreOnScreen");
 const highscoreInfoButton = document.querySelector("#highscore-info-button");
 const highscoreInfo = document.querySelector("#highscore-info");
+const yourTurn = document.querySelector("#your-turn");
+const simonsTurn = document.querySelector("#simons-turn");
+const muteBtn = document.querySelector("#mute-button");
+
+muteBtn.addEventListener('click', function() {
+    if (muteToggle == true) {
+        muteBtn.classList.remove("fa-volume-up");
+        muteBtn.classList.add("fa-volume-off");
+        muteBtn.classList.add("mute-on");
+        muteToggle = false;
+        playAudio = false;
+    }
+    else if (muteToggle == false) {
+        muteBtn.classList.remove("fa-volume-off");
+        muteBtn.classList.remove("mute-on");
+        muteBtn.classList.add("fa-volume-up");
+        muteToggle = true;
+        playAudio = true;
+    }
+});
 
 highscoreInfoButton.addEventListener('click', function() {
     if (highscoreInfoToggle == true) {
@@ -128,9 +150,11 @@ function gameTurn() {
         simonTurn = false;
         clearColor();
         userPlaying = true;
+        userSimonTurnText();
     }
 
     if (simonTurn) {
+        userSimonTurnText();
         clearColor();
         setTimeout(() => {
             if (simonSequence[colourFlash] == 1) greenSound();
@@ -145,7 +169,9 @@ function gameTurn() {
 function greenSound() {
     if (sound) {
         let audio = document.getElementById("green-snd");
-        audio.play();
+        if (playAudio == true) {
+            audio.play();
+        }
     }
     sound = true;
     grnBtn.style.backgroundColor = "lightgreen";
@@ -154,7 +180,9 @@ function greenSound() {
 function redSound() {
     if (sound) {
         let audio = document.getElementById("red-snd");
-        audio.play();
+        if (playAudio == true) {
+            audio.play();
+        }
     }
     sound = true;
     redBtn.style.backgroundColor = "crimson";
@@ -163,7 +191,9 @@ function redSound() {
 function yellowSound() {
     if (sound) {
         let audio = document.getElementById("yellow-snd");
-        audio.play();
+        if (playAudio == true) {
+            audio.play();
+        }
     }
     sound = true;
     ylwBtn.style.backgroundColor = "yellow";
@@ -172,7 +202,9 @@ function yellowSound() {
 function blueSound() {
     if (sound) {
         let audio = document.getElementById("blue-snd");
-        audio.play();
+        if (playAudio == true) {
+            audio.play();
+        }
     }
     sound = true;
     bluBtn.style.backgroundColor = "lightskyblue";
@@ -259,7 +291,7 @@ function verify() {
 
     if (correct == false) {
         colourFlashColor();
-        turnOnScreen.innerHTML = "***";
+        turnOnScreen.innerHTML = "*";
         setTimeout(function() {
             turnOnScreen.innerHTML = turn;
             clearColor();
@@ -310,5 +342,16 @@ function highScoreChecker() {
         startBtn.classList.remove("hidden");
         turnOnScreen.classList.remove("level-box-after-start");
         turnText.classList.remove("level-box-text-after-start");
+    }
+}
+
+function userSimonTurnText() {
+    if (simonTurn == true) {
+        simonsTurn.classList.add("visable");
+        yourTurn.classList.remove("visable");
+    }
+    else if (simonTurn == false) {
+        yourTurn.classList.add("visable");
+        simonsTurn.classList.remove("visable");
     }
 }

@@ -38,6 +38,7 @@
         <h2 id="highscoreOnScreen" class="high-score-score-font">0</h2>
         <h4 id="highscore-info" class="hidden high-score-algo-font">X / Y * Z</h4>
     </div>
+    
     <div id="border-circle">
         <div id="green-btn"></div>
         <div id="red-btn"></div>
@@ -53,6 +54,11 @@
                 LEVEL
             </div>
         </div>
+    </div>
+    
+    <div class="user-si-turn">
+        <h3 id="your-turn" class="hidden center tac cap">Your Turn!</h3>
+        <h3 id="simons-turn" class="hidden center tac cap">Simon's Turn!</h3>
     </div>
 
     <form onsubmit="return sendMail(this);" method="POST" class="hidden center send-score-form" id="scoreForm">
@@ -100,6 +106,9 @@
             <div id="dancodes" class="center"></div>
         </a>
     </div>
+    
+    <div class="fixed-feedback" id="feedback-button">?</div>
+    <div class="fixed-mute fa fa-volume-up" id="mute-button"></div>
 
     <script type="text/javascript" src="assets/js/saveLoad.js"></script>
     <script type="text/javascript" src="assets/js/sendMail.js"></script>
