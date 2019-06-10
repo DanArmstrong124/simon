@@ -7,6 +7,7 @@ var simonTurn;
 var intervalId;
 var sound = true;
 var gameWon;
+var gameStillOn = false;
 var userPlaying = false;
 var firstClick = true;
 var creditsToggle = true;
@@ -122,6 +123,7 @@ startBtn.addEventListener('click', function() {
         turnText.classList.add("level-box-text-after-start");
         colourClicks = 0;
         play();
+        gameStillOn = true;
     }
 });
 
@@ -225,7 +227,7 @@ function colourFlashColor() {
 }
 
 grnBtn.addEventListener('click', function() {
-    if (userPlaying) {
+    if (userPlaying == true && gameStillOn == true) {
         userSequence.push(1);
         verify();
         greenSound();
@@ -239,7 +241,7 @@ grnBtn.addEventListener('click', function() {
 });
 
 redBtn.addEventListener('click', function() {
-    if (userPlaying) {
+    if (userPlaying == true && gameStillOn == true) {
         userSequence.push(2);
         verify();
         redSound();
@@ -253,7 +255,7 @@ redBtn.addEventListener('click', function() {
 });
 
 ylwBtn.addEventListener('click', function() {
-    if (userPlaying) {
+    if (userPlaying == true && gameStillOn == true) {
         userSequence.push(3);
         verify();
         yellowSound();
@@ -267,7 +269,7 @@ ylwBtn.addEventListener('click', function() {
 });
 
 bluBtn.addEventListener('click', function() {
-    if (userPlaying) {
+    if (userPlaying == true && gameStillOn == true) {
         userSequence.push(4);
         verify();
         blueSound();
@@ -292,6 +294,7 @@ function verify() {
     if (correct == false) {
         colourFlashColor();
         turnOnScreen.innerHTML = "*";
+        gameStillOn = false;
         highscoreInfo.innerHTML = colourClicks + " Clicks";
         setTimeout(function() {
             turnOnScreen.innerHTML = turn;
@@ -327,6 +330,7 @@ function winnerFunction() {
     turnOnScreen.classList.add("hidden");
     userPlaying = false;
     gameWon = true;
+    gameStillOn = false;
     timeRunning = false;
     totalScore = colourClicks;
     emailSequence();

@@ -113,14 +113,50 @@ body {
 
 .instruct-button {
     font-size: 1.5em;
-    background-color: white;
     color: black !important;
+    width: 50%;
+    display: inline;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: ease-in-out 1s;
+    -moz-transition: ease-in-out 1s;
+    -o-transition: ease-in-out 1s;
+    -webkit-transition: ease-in-out 1s;
 }
 
 .credit-button {
     font-size: 1.5em;
-    background-color: white;
     color: black !important;
+    width: 50%;
+    display: inline;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: ease-in-out 1s;
+    -moz-transition: ease-in-out 1s;
+    -o-transition: ease-in-out 1s;
+    -webkit-transition: ease-in-out 1s;
+}
+
+.instruct-button:hover {
+    font-size: 1.5em;
+    color: black !important;
+    width: 50%;
+    display: inline;
+    background-color: rgba(255, 255, 255, 1);
+    transition: ease-in-out 1s;
+    -moz-transition: ease-in-out 1s;
+    -o-transition: ease-in-out 1s;
+    -webkit-transition: ease-in-out 1s;
+}
+
+.credit-button:hover {
+    font-size: 1.5em;
+    color: black !important;
+    width: 50%;
+    display: inline;
+    background-color: rgba(255, 255, 255, 1);
+    transition: ease-in-out 1s;
+    -moz-transition: ease-in-out 1s;
+    -o-transition: ease-in-out 1s;
+    -webkit-transition: ease-in-out 1s;
 }
 
 .start-button {
@@ -480,15 +516,52 @@ body {
 
     .instruct-button {
         font-size: 1em;
-        background-color: white;
         color: black !important;
+        width: 50%;
+        display: inline;
+        background-color: rgba(255, 255, 255, 0.2);
+        transition: ease-in-out 1s;
+        -moz-transition: ease-in-out 1s;
+        -o-transition: ease-in-out 1s;
+        -webkit-transition: ease-in-out 1s;
     }
 
     .credit-button {
         font-size: 1em;
-        background-color: white;
         color: black !important;
+        width: 50%;
+        display: inline;
+        background-color: rgba(255, 255, 255, 0.2);
+        transition: ease-in-out 1s;
+        -moz-transition: ease-in-out 1s;
+        -o-transition: ease-in-out 1s;
+        -webkit-transition: ease-in-out 1s;
     }
+
+    .instruct-button:hover {
+        font-size: 1em;
+        color: black !important;
+        width: 50%;
+        display: inline;
+        background-color: rgba(255, 255, 255, 1);
+        transition: ease-in-out 1s;
+        -moz-transition: ease-in-out 1s;
+        -o-transition: ease-in-out 1s;
+        -webkit-transition: ease-in-out 1s;
+    }
+
+    .credit-button:hover {
+        font-size: 1em;
+        color: black !important;
+        width: 50%;
+        display: inline;
+        background-color: rgba(255, 255, 255, 1);
+        transition: ease-in-out 1s;
+        -moz-transition: ease-in-out 1s;
+        -o-transition: ease-in-out 1s;
+        -webkit-transition: ease-in-out 1s;
+    }
+
     .level-box-after-start {
         margin-top: 35px !important;
     }
