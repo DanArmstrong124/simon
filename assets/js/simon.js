@@ -61,9 +61,6 @@ highscoreInfoButton.addEventListener('click', function() {
     if (highscoreInfoToggle == true) {
         highscoreInfo.classList.add("visable");
         highscoreInfoToggle = false;
-        setInterval(function() {
-            highscoreInfo.innerHTML = colourClicks + " Correct Clicks";
-        }, 1000);
     }
     else if (highscoreInfoToggle == false) {
         highscoreInfo.classList.remove("visable");
@@ -73,7 +70,7 @@ highscoreInfoButton.addEventListener('click', function() {
 
 creditBtn.addEventListener('click', function() {
     if (creditsToggle == true && instructionsToggle != false) {
-        credits.classList.add("visable")
+        credits.classList.add("visable");
         creditBtn.innerHTML = "Hide Credits";
         creditsToggle = false;
     }
@@ -239,7 +236,7 @@ grnBtn.addEventListener('click', function() {
             }, 300);
         }
     }
-})
+});
 
 redBtn.addEventListener('click', function() {
     if (userPlaying) {
@@ -253,7 +250,7 @@ redBtn.addEventListener('click', function() {
             }, 300);
         }
     }
-})
+});
 
 ylwBtn.addEventListener('click', function() {
     if (userPlaying) {
@@ -267,7 +264,7 @@ ylwBtn.addEventListener('click', function() {
             }, 300);
         }
     }
-})
+});
 
 bluBtn.addEventListener('click', function() {
     if (userPlaying) {
@@ -281,7 +278,7 @@ bluBtn.addEventListener('click', function() {
             }, 300);
         }
     }
-})
+});
 
 
 function verify() {
@@ -295,7 +292,7 @@ function verify() {
     if (correct == false) {
         colourFlashColor();
         turnOnScreen.innerHTML = "*";
-        highscoreInfo.innerHTML = (colourClicks - 1) + " Clicks";
+        highscoreInfo.innerHTML = colourClicks + " Clicks";
         setTimeout(function() {
             turnOnScreen.innerHTML = turn;
             turnOnScreen.classList.add("hidden");
