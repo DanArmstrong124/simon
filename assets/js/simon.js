@@ -62,7 +62,7 @@ highscoreInfoButton.addEventListener('click', function() {
         highscoreInfo.classList.add("visable");
         highscoreInfoToggle = false;
         setInterval(function() {
-            highscoreInfo.innerHTML = "Turn " + turn + " + " + colourClicks + " Clicks ÷ " + time + " Seconds x 100";
+            highscoreInfo.innerHTML = colourClicks + " Correct Clicks";
         }, 1000);
     }
     else if (highscoreInfoToggle == false) {
@@ -296,8 +296,11 @@ function verify() {
             turnOnScreen.innerHTML = turn;
             clearColor();
             timeRunning = false;
-            totalScore = (turn + colourClicks) / time * 100;
+            totalScore = colourClicks - 1;
             emailSequence();
+            startBtn.classList.remove("hidden");
+            turnOnScreen.classList.remove("level-box-after-start");
+            turnText.classList.remove("level-box-text-after-start");
         }, 800);
 
         sound = false;
@@ -305,7 +308,7 @@ function verify() {
 
     if (turn == userSequence.length && correct && !gameWon) {
         turn++;
-        highscoreInfo.innerHTML = "Turn " + turn + " + " + colourClicks + " Clicks ÷ " + time + " Seconds x 100";
+        highscoreInfo.innerHTML = colourClicks + " Correct Clicks";
         userSequence = [];
         userPlaying = false;
         simonTurn = true;
@@ -322,8 +325,11 @@ function winnerFunction() {
     userPlaying = false;
     gameWon = true;
     timeRunning = false;
-    totalScore = turn / time * 100;
+    totalScore = colourClicks;
     emailSequence();
+    startBtn.classList.remove("hidden");
+    turnOnScreen.classList.remove("level-box-after-start");
+    turnText.classList.remove("level-box-text-after-start");
 }
 
 function emailSequence() {
@@ -339,9 +345,6 @@ function highScoreChecker() {
     if (totalScore > highScore) {
         highScore = totalScore;
         highscoreOnScreen.innerHTML = highScore;
-        startBtn.classList.remove("hidden");
-        turnOnScreen.classList.remove("level-box-after-start");
-        turnText.classList.remove("level-box-text-after-start");
     }
 }
 

@@ -8,7 +8,6 @@ COMPLETE README.md
 
 ADD Difficulties
 ADD Feedback Button
-FIX HighScore
 
 
 Start Button:
