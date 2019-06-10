@@ -8,9 +8,4 @@ COMPLETE README.md
 
 ADD Difficulties
 ADD Feedback Button
-
-
-Start Button:
-
-Make it so it just says Start(FLASHING), until click and then it only shows the number.
-Fix hyperlink to the image.
+FIX CORRECT CLICKS

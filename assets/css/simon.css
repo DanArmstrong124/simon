@@ -4,6 +4,18 @@ body {
     background-image: url(../images/wood-background.jpg)
 }
 
+#dancodes {
+    width: 200px;
+    height: 200px;
+    margin-top: 50px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.winner-function-margin {
+    margin-left: 30px !important;
+}
+
 .mute-on {
     color: red;
 }
@@ -115,15 +127,27 @@ body {
     border-radius: 30% !important;
     margin-left: 55px;
     font-size: 1.5em;
-    background-color: white;
     color: black !important;
+    transition: ease-in-out 0.5s;
+    -moz-transition: ease-in-out 0.5s;
+    -webkit-transition: ease-in-out 0.5s;
+}
+
+.start-button:hover {
+    border-radius: 30% !important;
+    margin-left: 55px;
+    font-size: 1.5em;
+    color: green !important;
+    transition: ease-in-out 0.5s;
+    -moz-transition: ease-in-out 0.5s;
+    -webkit-transition: ease-in-out 0.5s;
 }
 
 #start-button-div {
     position: absolute;
     font-family: 'Gloria Hallelujah', cursive;
     margin-left: 26px;
-    margin-top: 110px;
+    margin-top: 75px;
 }
 
 .level-text {
@@ -156,6 +180,7 @@ body {
     text-align: center;
     vertical-align: middle;
     line-height: 30px;
+    bottom: 100px;
 }
 
 #border-circle {
@@ -264,11 +289,15 @@ body {
 .highscore-info {
     color: black;
     transition: ease-in-out 0.5s;
+    -moz-transition: ease-in-out 0.5s;
+    -webkit-transition: ease-in-out 0.5s;
 }
 
 .highscore-info:hover {
     color: red;
     transition: ease-in-out 0.5s;
+    -moz-transition: ease-in-out 0.5s;
+    -webkit-transition: ease-in-out 0.5s;
 }
 
 @media(max-width: 536px) {
@@ -288,15 +317,27 @@ body {
         border-radius: 30% !important;
         margin-left: 55px;
         font-size: 1em;
-        background-color: white;
         color: black !important;
+        transition: ease-in-out 0.5s;
+        -moz-transition: ease-in-out 0.5s;
+        -webkit-transition: ease-in-out 0.5s;
+    }
+
+    .start-button:hover {
+        border-radius: 30% !important;
+        margin-left: 55px;
+        font-size: 1em;
+        color: green !important;
+        transition: ease-in-out 0.5s;
+        -moz-transition: ease-in-out 0.5s;
+        -webkit-transition: ease-in-out 0.5s;
     }
 
     #start-button-div {
         position: absolute;
         font-family: 'Gloria Hallelujah', cursive;
-        margin-left: -28px;
-        margin-top: 26px;
+        margin-left: -25px;
+        margin-top: 25px;
     }
 
     .level-text {
@@ -328,6 +369,7 @@ body {
         text-align: center;
         vertical-align: middle;
         line-height: 30px;
+        bottom: 40px;
     }
 
     #border-circle {
@@ -484,9 +526,22 @@ body {
         border-radius: 30% !important;
         margin-left: 55px;
         font-size: 1em;
-        background-color: white;
         color: black !important;
+        transition: ease-in-out 0.5s;
+        -moz-transition: ease-in-out 0.5s;
+        -webkit-transition: ease-in-out 0.5s;
     }
+
+    .start-button:hover {
+        border-radius: 30% !important;
+        margin-left: 55px;
+        font-size: 1em;
+        color: green !important;
+        transition: ease-in-out 0.5s;
+        -moz-transition: ease-in-out 0.5s;
+        -webkit-transition: ease-in-out 0.5s;
+    }
+
     .level-box-after-start {
         margin-top: 35px !important;
     }

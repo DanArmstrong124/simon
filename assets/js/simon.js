@@ -116,8 +116,11 @@ startBtn.addEventListener('click', function() {
             }, 1000);
             firstClick = false;
         }
+        scoreForm.classList.remove("visable");
+        startBtn.classList.remove("winner-function-margin");
         startBtn.innerHTML = "Retry";
         startBtn.classList.add("hidden");
+        turnOnScreen.classList.remove("hidden");
         turnOnScreen.classList.add("level-box-after-start");
         turnText.classList.add("level-box-text-after-start");
         colourClicks = 0;
@@ -292,8 +295,10 @@ function verify() {
     if (correct == false) {
         colourFlashColor();
         turnOnScreen.innerHTML = "*";
+        highscoreInfo.innerHTML = (colourClicks - 1) + " Clicks";
         setTimeout(function() {
             turnOnScreen.innerHTML = turn;
+            turnOnScreen.classList.add("hidden");
             clearColor();
             timeRunning = false;
             totalScore = colourClicks - 1;
@@ -308,7 +313,7 @@ function verify() {
 
     if (turn == userSequence.length && correct && !gameWon) {
         turn++;
-        highscoreInfo.innerHTML = colourClicks + " Correct Clicks";
+        highscoreInfo.innerHTML = colourClicks + " Clicks";
         userSequence = [];
         userPlaying = false;
         simonTurn = true;
@@ -322,14 +327,20 @@ function verify() {
 function winnerFunction() {
     colourFlashColor();
     turnOnScreen.innerHTML = "WIN";
+    turnOnScreen.classList.add("hidden");
     userPlaying = false;
     gameWon = true;
     timeRunning = false;
     totalScore = colourClicks;
     emailSequence();
+    startBtn.classList.add("winner-function-margin");
+    startBtn.innerHTML = "YOU WIN!";
     startBtn.classList.remove("hidden");
     turnOnScreen.classList.remove("level-box-after-start");
     turnText.classList.remove("level-box-text-after-start");
+    setTimeout(function() {
+        startBtn.innerHTML = "Play Again?";
+    }, 5000);
 }
 
 function emailSequence() {
