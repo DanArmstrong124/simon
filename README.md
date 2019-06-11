@@ -26,8 +26,6 @@ For some/all of your features, you may choose to reference the specific project 
 In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
 
 ### Features Left to Implement
-- ADD Difficulties
-- ADD Feedback Button
 - Jasmine Testing
 - Desktop Friendly
 
