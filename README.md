@@ -30,8 +30,6 @@ In addition, you may also use this section to discuss plans for additional featu
 - ADD Feedback Button
 - Jasmine Testing
 - Desktop Friendly
-- Difficulty in email
-- dark out the blue and yellow on easy
 
 ## Technologies Used
 

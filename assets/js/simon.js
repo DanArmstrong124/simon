@@ -41,6 +41,7 @@ const highscoreInfo = document.querySelector("#highscore-info");
 const yourTurn = document.querySelector("#your-turn");
 const simonsTurn = document.querySelector("#simons-turn");
 const muteBtn = document.querySelector("#mute-button");
+const feedbackBtn = document.querySelector("#feedback-button");
 const difSelect = document.querySelector("#difficulty");
 
 muteBtn.addEventListener('click', function() {

@@ -34,6 +34,7 @@ body {
     position: fixed;
     bottom: 50px;
     right: 50px;
+    font-size: 50px;
 }
 
 .fixed-mute {
@@ -596,6 +597,7 @@ body {
         position: fixed;
         bottom: 10px;
         right: 10px;
+        font-size: 20px;
     }
 
     .fixed-mute {
