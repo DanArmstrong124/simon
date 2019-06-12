@@ -26,10 +26,8 @@ For some/all of your features, you may choose to reference the specific project 
 In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
 
 ### Features Left to Implement
-- Are you still there alert after 30 seconds without pressing.
 - Jasmine Testing
 - Desktop Friendly
-- Center Difficulties
 - podcast
 
 ## Technologies Used

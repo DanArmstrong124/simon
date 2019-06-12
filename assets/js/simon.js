@@ -21,6 +21,7 @@ var colourClicks = 0;
 var muteToggle = true;
 var playAudio = true;
 var difWhenPlaying;
+var idleTimer = 0;
 
 
 const turnOnScreen = document.querySelector("#turn");
@@ -129,6 +130,7 @@ startBtn.addEventListener('click', function() {
     }
     if (firstClick || userPlaying == true) {
         if (firstClick == true) {
+            idleWarning();
             setInterval(function() {
                 if (simonTurn == true) {
                     timeRunning = false;
@@ -304,6 +306,7 @@ function colourFlashColor() {
 grnBtn.addEventListener('click', function() {
     if (userPlaying == true && gameStillOn == true) {
         userSequence.push(1);
+        idleTimer = 0;
         verify();
         greenSound();
         colourClicks++;
@@ -318,6 +321,7 @@ grnBtn.addEventListener('click', function() {
 redBtn.addEventListener('click', function() {
     if (userPlaying == true && gameStillOn == true) {
         userSequence.push(2);
+        idleTimer = 0;
         verify();
         redSound();
         colourClicks++;
@@ -332,6 +336,7 @@ redBtn.addEventListener('click', function() {
 ylwBtn.addEventListener('click', function() {
     if (userPlaying == true && gameStillOn == true && difWhenPlaying != "EASY") {
         userSequence.push(3);
+        idleTimer = 0;
         verify();
         yellowSound();
         colourClicks++;
@@ -346,6 +351,7 @@ ylwBtn.addEventListener('click', function() {
 bluBtn.addEventListener('click', function() {
     if (userPlaying == true && gameStillOn == true && difWhenPlaying != "EASY") {
         userSequence.push(4);
+        idleTimer = 0;
         verify();
         blueSound();
         colourClicks++;
@@ -360,6 +366,7 @@ bluBtn.addEventListener('click', function() {
 cynBtn.addEventListener('click', function() {
     if (userPlaying == true && gameStillOn == true && difWhenPlaying != "EASY" && difWhenPlaying == "EXTREME") {
         userSequence.push(5);
+        idleTimer = 0;
         verify();
         cyanSound();
         colourClicks++;
@@ -374,6 +381,7 @@ cynBtn.addEventListener('click', function() {
 purBtn.addEventListener('click', function() {
     if (userPlaying == true && gameStillOn == true && difWhenPlaying != "EASY" && difWhenPlaying == "EXTREME") {
         userSequence.push(6);
+        idleTimer = 0;
         verify();
         purpleSound();
         colourClicks++;
@@ -494,4 +502,20 @@ function userSimonTurnText() {
 function easyMode() {
     bluBtn.classList.add("darkoutblue");
     ylwBtn.classList.add("darkoutyellow");
+}
+
+function idleWarning() {
+    setInterval(function() {
+        if (userPlaying == true) {
+            idleTimer++;
+        }
+        else if (userPlaying == false) {
+            idleTimer = 0;
+        }
+    }, 1000);
+    setInterval(function() {
+        if (idleTimer == 30) {
+            alert("Are you still playing?");
+        }
+    }, 500);
 }

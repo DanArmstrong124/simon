@@ -20,6 +20,13 @@ body {
     border-radius: 50%;
 }
 
+#difficulty {
+    position: absolute;
+    font-size: 20px;
+    top: 50px;
+    left: 50px;
+}
+
 .winner-function-margin {
     margin-left: 30px !important;
 }
@@ -377,6 +384,13 @@ body {
 }
 
 @media(max-width: 582px) {
+    #difficulty {
+        position: absolute;
+        font-size: 15px;
+        top: 100px;
+        left: 10px;
+    }
+    
     #dancodes {
         width: 150px;
         height: 150px;
