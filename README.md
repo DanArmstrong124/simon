@@ -30,6 +30,9 @@ In addition, you may also use this section to discuss plans for additional featu
 - Are you still there alert after 30 seconds without pressing.
 - Jasmine Testing
 - Desktop Friendly
+- podcast
+- bbq
+- ascot
 
 ## Technologies Used
 

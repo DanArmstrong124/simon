@@ -246,6 +246,34 @@ body {
 
 /*Buttons*/
 
+#purple-btn {
+    background: #683a73;
+    border-radius: 50%;
+    height: 125px;
+    width: 125px;
+    position: relative;
+    border-style: solid;
+    border-width: 10px;
+    margin: auto;
+    margin-top: 60px;
+    top: 115px;
+    left: 217px;
+}
+
+#cyan-btn {
+    background: #347d7d;
+    border-radius: 50%;
+    height: 125px;
+    width: 125px;
+    position: relative;
+    border-style: solid;
+    border-width: 10px;
+    margin: auto;
+    margin-top: 60px;
+    top: -89px;
+    right: 217px;
+}
+
 #green-btn {
     position: absolute;
     height: 250px;
@@ -348,7 +376,7 @@ body {
     -webkit-transition: ease-in-out 0.5s;
 }
 
-@media(max-width: 536px) {
+@media(max-width: 582px) {
     #dancodes {
         width: 150px;
         height: 150px;

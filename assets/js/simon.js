@@ -29,6 +29,8 @@ const grnBtn = document.querySelector("#green-btn");
 const redBtn = document.querySelector("#red-btn");
 const ylwBtn = document.querySelector("#yellow-btn");
 const bluBtn = document.querySelector("#blue-btn");
+const purBtn = document.querySelector("#purple-btn");
+const cynBtn = document.querySelector("#cyan-btn");
 const startBtn = document.querySelector("#start");
 const creditBtn = document.querySelector("#credits-button");
 const instructionsBtn = document.querySelector("#instructions-button");
@@ -117,6 +119,14 @@ startBtn.addEventListener('click', function() {
         bluBtn.classList.remove("darkoutblue");
         ylwBtn.classList.remove("darkoutyellow");
     }
+    if (difWhenPlaying == "EXTREME") {
+        purBtn.classList.add("visable");
+        cynBtn.classList.add("visable");
+    }
+    if (difWhenPlaying != "EXTREME") {
+        purBtn.classList.remove("visable");
+        cynBtn.classList.remove("visable");
+    }
     if (firstClick || userPlaying == true) {
         if (firstClick == true) {
             setInterval(function() {
@@ -173,8 +183,8 @@ function play() {
         }
     }
     if (difWhenPlaying == "EXTREME") {
-        for (var i = 0; i < 100; i++) {
-            simonSequence.push(Math.floor(Math.random() * 4) + 1);
+        for (var i = 0; i < 50; i++) {
+            simonSequence.push(Math.floor(Math.random() * 6) + 1);
         }
     }
     simonTurn = true;
