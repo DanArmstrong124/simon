@@ -517,5 +517,5 @@ function idleWarning() {
         if (idleTimer == 30) {
             alert("Are you still playing?");
         }
-    }, 500);
+    }, 1000);
 }
