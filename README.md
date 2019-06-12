@@ -26,13 +26,12 @@ For some/all of your features, you may choose to reference the specific project 
 In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
 
 ### Features Left to Implement
-- Fix Feedback Button
 - Are you still there alert after 30 seconds without pressing.
 - Jasmine Testing
 - Desktop Friendly
+- add 2 new sounds
+- responsive design
 - podcast
-- bbq
-- ascot
 
 ## Technologies Used
 

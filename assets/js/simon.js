@@ -210,6 +210,8 @@ function gameTurn() {
             if (simonSequence[colourFlash] == 2) redSound();
             if (simonSequence[colourFlash] == 3) yellowSound();
             if (simonSequence[colourFlash] == 4) blueSound();
+            if (simonSequence[colourFlash] == 5) cyanSound();
+            if (simonSequence[colourFlash] == 6) purpleSound();
             colourFlash++;
         }, 200);
     }
@@ -259,11 +261,35 @@ function blueSound() {
     bluBtn.style.backgroundColor = "lightskyblue";
 }
 
+function cyanSound() {
+    if (sound) {
+        let audio = document.getElementById("cyan-snd");
+        if (playAudio == true) {
+            audio.play();
+        }
+    }
+    sound = true;
+    cynBtn.style.backgroundColor = "#35efef";
+}
+
+function purpleSound() {
+    if (sound) {
+        let audio = document.getElementById("purple-snd");
+        if (playAudio == true) {
+            audio.play();
+        }
+    }
+    sound = true;
+    purBtn.style.backgroundColor = "#c638e8";
+}
+
 function clearColor() {
     grnBtn.style.backgroundColor = "darkgreen";
     redBtn.style.backgroundColor = "darkred";
     ylwBtn.style.backgroundColor = "goldenrod";
     bluBtn.style.backgroundColor = "darkblue";
+    purBtn.style.backgroundColor = "#683a73";
+    cynBtn.style.backgroundColor = "#347d7d";
 }
 
 function colourFlashColor() {
@@ -271,6 +297,8 @@ function colourFlashColor() {
     redBtn.style.backgroundColor = "crimson";
     ylwBtn.style.backgroundColor = "yellow";
     bluBtn.style.backgroundColor = "lightskyblue";
+    purBtn.style.backgroundColor = "#c638e8";
+    cynBtn.style.backgroundColor = "#35efef";
 }
 
 grnBtn.addEventListener('click', function() {
@@ -329,6 +357,34 @@ bluBtn.addEventListener('click', function() {
     }
 });
 
+cynBtn.addEventListener('click', function() {
+    if (userPlaying == true && gameStillOn == true && difWhenPlaying != "EASY" && difWhenPlaying == "EXTREME") {
+        userSequence.push(5);
+        verify();
+        cyanSound();
+        colourClicks++;
+        if (!gameWon) {
+            setTimeout(() => {
+                clearColor();
+            }, 300);
+        }
+    }
+});
+
+purBtn.addEventListener('click', function() {
+    if (userPlaying == true && gameStillOn == true && difWhenPlaying != "EASY" && difWhenPlaying == "EXTREME") {
+        userSequence.push(6);
+        verify();
+        purpleSound();
+        colourClicks++;
+        if (!gameWon) {
+            setTimeout(() => {
+                clearColor();
+            }, 300);
+        }
+    }
+});
+
 
 function verify() {
     if (userSequence[userSequence.length - 1] !== simonSequence[userSequence.length - 1])
@@ -349,7 +405,7 @@ function verify() {
         }
     }
     if (difWhenPlaying == "EXTREME") {
-        if (userSequence.length == 100 && correct) {
+        if (userSequence.length == 50 && correct) {
             winnerFunction();
         }
     }
