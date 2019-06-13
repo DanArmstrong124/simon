@@ -12,6 +12,12 @@ body {
     background-color: rgba(26, 26, 49, 1) !important;
 }
 
+.download-android {
+    font-size: 70px;
+    text-decoration: none;
+    color: #32821a;
+}
+
 #dancodes {
     width: 200px;
     height: 200px;

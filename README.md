@@ -28,6 +28,8 @@ In addition, you may also use this section to discuss plans for additional featu
 ### Features Left to Implement
 - Jasmine Testing
 - Desktop Friendly
+- README.md
+- WIREFRAMES
 - podcast
 
 ## Technologies Used
