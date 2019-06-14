@@ -1,85 +1,146 @@
 # Simon Game
+My milestone project is based on the game of Simon. In the game of Simon, the system creates a series of tones and lights and requires a user to repeat the sequence. If the user succeeds, the series becomes progressively longer and more complex. 
+Once the user fails to copy the sequence, the game is over.
 
-One or two paragraphs providing an overview of your project.
+It contains JavaScript, CSS and HTML as the trinity that I was most confident with for the project.
 
-Essentially, this part is your sales pitch.
+Multiple different elements were adapted for Responsiveness of the website.
  
 ## UX
- 
-Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
 
-In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
-- As a user type, I want to perform an action, so that I can achieve a goal.
+- As a user, I want to be able to press a start button, so that I can play Simon.
+- As a user, I want to be able to change the difficulty, so that I can play Simon based on my memory/skill sets.
+- As a user, I want to be able to get a copy of my progress, so that I can see my scores in the future.
 
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
+LINK TO WIREFRAMES.
 
 ## Features
 
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
- 
 ### Existing Features
-- Feature 1 - allows users X to achieve Y, by having them fill out Z
-- ...
+- Simon Game:
+- - This is the main aspect to the project, it is the feature that allows the user to play the game of Simon by clicking a start button.
 
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
+- Difficulties:
+- - This is a feature that allows a user to change the difficulty to meet their needs or skill sets, and can be changed based on if they think they can do better.
 
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
+- High Score:
+- - This is a feature that is at the top of the screen, and will change once the user has beaten the previous score they have achieved in their web session.
+
+- High Score Info Button:
+- - This little button sits nicely next to the High Score Text and just gives a breif overview on how they have gained their high score and what they are on now.
+
+- Mute Button:
+- - This is a feature that allows the user to turn off the sound if they are getting sick of it etc.
+
+- Feedback Button:
+- - More for personal development, this allows the user to go to my website and leave me feedback.
+
+- Instructions:
+- - This is a feature that contains written instructions on how to play, as well as a video showing the user what the game looks like when played correctly.
+
+- Credits:
+- - Ths is a feature that gives credit to the developer(me), and to the website of which I collated my Royalty Free Sounds.
+
+- DanCodes Logo:
+- - This is a small feature for my company allowing the user to check out what else I have made etc.
+
+- Android Button:
+- - This is a test feature and may be removed, it allows the user to go through a link to install the website in app format (Only on Android).
+
+- Idle Warning:
+- - This is a feature that send the user an alert if the game is running but nothing has been clicked within 30 seconds.
 
 ### Features Left to Implement
 - Jasmine Testing
-- Desktop Friendly
-- README.md
 - WIREFRAMES
-- podcast
 
 ## Technologies Used
-
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
-
+- [HTML](https://en.wikipedia.org/wiki/HTML)
+    - The project uses **HTML** to develop the base of the site.
+- [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+    - The project uses **CSS** to develop the style of the site.
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+    - The project uses **JavaScript** to develop the functions of the site.
+- [EmailJS](https://www.emailjs.com/)
+    - The project uses **EmailJS** to simplify the use of sending automated emails.
 - [JQuery](https://jquery.com)
     - The project uses **JQuery** to simplify DOM manipulation.
 
 
 ## Testing
 
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
+1. Playing Simon:
+    1. Press start.
+    2. When it says "Your Turn" under the game itself, click the colour that "Simon" lit up.
+    3. Keep Following the Sequence to win.
+    4. Click the wrong colour for the losing function.
 
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
+2. Changing difficulties:
+    1. Click the select difficulty button at the top left of the screen.
+    2. Choose your difficulty.
+    3. Press start.
+    4. If "Easy" is the difficulty then only Red and Green should light up.
+    5. If "Extreme" is the difficulty then 2 new colour will appear on the left and right of the game.
 
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
+3. Saving your score:
+    1. Finish a game of Simon (Win or Lose).
+    2. A form will appear underneath the game with your score, time and turn already put inside of the inputs.
+    3. Fill in a name and an email and press send.
 
-1. Contact form:
-    1. Go to the "Contact Us" page
-    2. Try to submit the empty form and verify that an error message about the required fields appears
-    3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-    4. Try to submit the form with all inputs valid and verify that a success message appears.
+4. Muting the game:
+    1. Press the sound button at the bottom left of the screen (It should then go Red, and if you click it again return to it original colour).
+    2. Once it has been clicked, no sound should play from the Simon Game colours
 
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
+5. Leaving Feedback:
+    1. Press the chat bubble in the bottom right of the screen.
+    2. Fill out the form on the seperate website to leave the feedback.
 
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
+6. View the instructions:
+    1. Click the instructions button underneath the game.
+    2. Read through the text and watch the video for a demonstration.
 
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
+7. View the credits:
+    1. Click the credits button underneath the game.
+    2. Read the credits to find out more information on how this game was put together.
+    3. (Alternatively) you can always click the DanCodes.co.uk logo to take the user to the site of the developer.
+
+8. Get the app (Unstable):
+    1. Click the android logo at the bottom of the screen.
+    2. Follow the instructions given by the Third Party.
+
+9. Check my highscore:
+    1. Visable at the top of the screen is your highscore of your session.
+    2. To see how you have gained that, you can click the info button next to the text.
+
+10. Responsiveness:
+    1. Check the website in browser on desktop, tablet and phone.
+    2. You should be able to see that I have made the website responsive to all sizes.
 
 ## Deployment
+- Cloud9 User Hosting
+- - I used cloud9 hosting at first to test out the site and develop the website using the provided google developer tools.
+- - Prior to the "Run" button, I was using the preview option to allow for me to get the basic template of the website set up whilst being able to have a live automated preview to edit as I see what needs to be done.
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
-
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-- Different values for environment variables (Heroku Config Vars)?
-- Different configuration files?
-- Separate git branch?
-
-In addition, if it is not obvious, you should also describe how to run your code locally.
-
+- GitHub Pages
+- - I used GitHub Pages to host the website in its "prime" as it is running constantly and allows for the users that were testing the website for me to be able to access the content at anytime throughout the day.
+- - To set up the GitHub pages:
+- - 1. I would first initialise Git in the terminal using "git init"
+- - 2. I would then link the GitHub repository to my cloud9 terminal.
+- - 3. After the initial "git push" I then went to my GitHub repository.
+- - 4. Using the settings on the repository, I set up the GitHub page using the Master Branch of my code.
+- - 5. For easier access, I then linked a Free Domain of www.SimonGame.ga to the GitHub page using DNS forwarding(shadow url).
 
 ## Credits
 
 ### Content
-- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
+- Some of the text for the Simon Game description README.md (line 2-3) was copied from the [Wikipedia article of Simon](https://en.wikipedia.org/wiki/Simon_(game)).
 
 ### Media
-- The photos used in this site were obtained from ...
+- Certain font elements were used through a fontkit via [FontAwesome](https://fontawesome.com/).
+- The backgrond was taken from a royalty free backgrond search via [Google](https://www.google.com/).
+- The sounds used on the Simon Game were downloaded via [ZapSplat](https://www.zapsplat.com/).
+- The videos used in the Tutorial Section were recored by me, but embedded via [YouTube](https://www.youtube.com/embed/SCQok9PDqVw?rel=0).
+- The DanCodes Logo is a logo I created and is from [DanCodes](https://www.DanCodes.co.uk).
 
 ### Acknowledgements
-
-- I received inspiration for this project from X
+- The app was developed via [AppsGeyser](http://app.appsgeyser.com/9118769/simongame).
