@@ -18,37 +18,37 @@ LINK TO WIREFRAMES.
 
 ### Existing Features
 - Simon Game:
-- - This is the main aspect to the project, it is the feature that allows the user to play the game of Simon by clicking a start button.
+    - This is the main aspect to the project, it is the feature that allows the user to play the game of Simon by clicking a start button.
 
 - Difficulties:
-- - This is a feature that allows a user to change the difficulty to meet their needs or skill sets, and can be changed based on if they think they can do better.
+    - This is a feature that allows a user to change the difficulty to meet their needs or skill sets, and can be changed based on if they think they can do better.
 
 - High Score:
-- - This is a feature that is at the top of the screen, and will change once the user has beaten the previous score they have achieved in their web session.
+    - This is a feature that is at the top of the screen, and will change once the user has beaten the previous score they have achieved in their web session.
 
 - High Score Info Button:
-- - This little button sits nicely next to the High Score Text and just gives a breif overview on how they have gained their high score and what they are on now.
+    - This little button sits nicely next to the High Score Text and just gives a breif overview on how they have gained their high score and what they are on now.
 
 - Mute Button:
-- - This is a feature that allows the user to turn off the sound if they are getting sick of it etc.
+    - This is a feature that allows the user to turn off the sound if they are getting sick of it etc.
 
 - Feedback Button:
-- - More for personal development, this allows the user to go to my website and leave me feedback.
+    - More for personal development, this allows the user to go to my website and leave me feedback.
 
 - Instructions:
-- - This is a feature that contains written instructions on how to play, as well as a video showing the user what the game looks like when played correctly.
+    - This is a feature that contains written instructions on how to play, as well as a video showing the user what the game looks like when played correctly.
 
 - Credits:
-- - Ths is a feature that gives credit to the developer(me), and to the website of which I collated my Royalty Free Sounds.
+    - This is a feature that gives credit to the developer(me), and to the website of which I collated my Royalty Free Sounds.
 
 - DanCodes Logo:
-- - This is a small feature for my company allowing the user to check out what else I have made etc.
+    - This is a small feature for my company allowing the user to check out what else I have made etc.
 
 - Android Button:
-- - This is a test feature and may be removed, it allows the user to go through a link to install the website in app format (Only on Android).
+    - This is a test feature and may be removed, it allows the user to go through a link to install the website in app format (Only on Android).
 
 - Idle Warning:
-- - This is a feature that send the user an alert if the game is running but nothing has been clicked within 30 seconds.
+    - This is a feature that send the user an alert if the game is running but nothing has been clicked within 30 seconds.
 
 ### Features Left to Implement
 - Jasmine Testing
@@ -118,17 +118,17 @@ LINK TO WIREFRAMES.
 
 ## Deployment
 - Cloud9 User Hosting
-- - I used cloud9 hosting at first to test out the site and develop the website using the provided google developer tools.
-- - Prior to the "Run" button, I was using the preview option to allow for me to get the basic template of the website set up whilst being able to have a live automated preview to edit as I see what needs to be done.
+    - I used cloud9 hosting at first to test out the site and develop the website using the provided google developer tools.
+    - Prior to the "Run" button, I was using the preview option to allow for me to get the basic template of the website set up whilst being able to have a live automated preview to edit as I see what needs to be done.
 
 - GitHub Pages
-- - I used GitHub Pages to host the website in its "prime" as it is running constantly and allows for the users that were testing the website for me to be able to access the content at anytime throughout the day.
-- - To set up the GitHub pages:
-- - 1. I would first initialise Git in the terminal using "git init"
-- - 2. I would then link the GitHub repository to my cloud9 terminal.
-- - 3. After the initial "git push" I then went to my GitHub repository.
-- - 4. Using the settings on the repository, I set up the GitHub page using the Master Branch of my code.
-- - 5. For easier access, I then linked a Free Domain of www.SimonGame.ga to the GitHub page using DNS forwarding(shadow url).
+    - I used GitHub Pages to host the website in its "prime" as it is running constantly and allows for the users that were testing the website for me to be able to access the content at anytime throughout the day.
+    - To set up the GitHub pages:
+        1. I would first initialise Git in the terminal using "git init"
+        2. I would then link the GitHub repository to my cloud9 terminal.
+        3. After the initial "git push" I then went to my GitHub repository.
+        4. Using the settings on the repository, I set up the GitHub page using the Master Branch of my code.
+        5. For easier access, I then linked a Free Domain of www.SimonGame.ga to the GitHub page using DNS forwarding(shadow url).
 
 ## Credits
 
