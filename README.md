@@ -89,7 +89,7 @@ LINK TO WIREFRAMES.
 
 4. Muting the game:
     1. Press the sound button at the bottom left of the screen (It should then go Red, and if you click it again return to it original colour).
-    2. Once it has been clicked, no sound should play from the Simon Game colours
+    2. Once it has been clicked, no sound should play from the Simon Game colours.
 
 5. Leaving Feedback:
     1. Press the chat bubble in the bottom right of the screen.
@@ -124,7 +124,7 @@ LINK TO WIREFRAMES.
 - GitHub Pages
     - I used GitHub Pages to host the website in its "prime" as it is running constantly and allows for the users that were testing the website for me to be able to access the content at anytime throughout the day.
     - To set up the GitHub pages:
-        1. I would first initialise Git in the terminal using "git init"
+        1. I would first initialise Git in the terminal using "git init".
         2. I would then link the GitHub repository to my cloud9 terminal.
         3. After the initial "git push" I then went to my GitHub repository.
         4. Using the settings on the repository, I set up the GitHub page using the Master Branch of my code.
