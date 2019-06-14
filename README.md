@@ -118,6 +118,10 @@ Multiple different elements were adapted for Responsiveness of the website.
     1. Check the website in browser on desktop, tablet and phone.
     2. You should be able to see that I have made the website responsive to all sizes.
 
+### My user testing
+- After testing out all the features myself, I then took to my family and friends to see if they can test out the features for me aswell. By looking at my emails, I can see that they are able to access the game, play it, change the difficulty and send their scores etc...
+- Here is a link to their [tests](/assets/images/emailJS-test-image.JPG).
+
 ## Deployment
 - Cloud9 User Hosting
     - I used cloud9 hosting at first to test out the site and develop the website using the provided google developer tools.
