@@ -12,7 +12,10 @@ Multiple different elements were adapted for Responsiveness of the website.
 - As a user, I want to be able to change the difficulty, so that I can play Simon based on my memory/skill sets.
 - As a user, I want to be able to get a copy of my progress, so that I can see my scores in the future.
 
-LINK TO WIREFRAMES.
+# WireFrames
+
+- [Desktop WireFrame](/assets/wireframes/desktop-wireframe.png).
+- [Mobile WireFrame](/assets/wireframes/mobile-wireframe.png).
 
 ## Features
 
