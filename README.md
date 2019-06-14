@@ -52,7 +52,6 @@ LINK TO WIREFRAMES.
 
 ### Features Left to Implement
 - Jasmine Testing
-- WIREFRAMES
 
 ## Technologies Used
 - [HTML](https://en.wikipedia.org/wiki/HTML)
