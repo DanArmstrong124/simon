@@ -11,6 +11,7 @@ Multiple different elements were adapted for Responsiveness of the website.
 - As a user, I want to be able to press a start button, so that I can play Simon.
 - As a user, I want to be able to change the difficulty, so that I can play Simon based on my memory/skill sets.
 - As a user, I want to be able to get a copy of my progress, so that I can see my scores in the future.
+- As a user, I want to be able to leave feedback, so that I can help improve the online application.
 
 ## WireFrames
 
@@ -28,6 +29,10 @@ Multiple different elements were adapted for Responsiveness of the website.
 
 - High Score:
     - This is a feature that is at the top of the screen, and will change once the user has beaten the previous score they have achieved in their web session.
+        - EASY: This difficulty goes up to round 10, with the use of 2 colours.
+        - NORMAL: This difficulty goes up to round 20, with the use of 4 colours.
+        - HARD: This difficulty goes up to round 50, with the use of 4 colours.
+        - EXTREME: This difficulty goes up to round 50, with the use of 6 colours.
 
 - High Score Info Button:
     - This little button sits nicely next to the High Score Text and just gives a breif overview on how they have gained their high score and what they are on now.
@@ -70,6 +75,8 @@ Multiple different elements were adapted for Responsiveness of the website.
 
 
 ## Testing
+
+- When I was planning how to test out my website, I felt comfortable using manual tests such as getting other users to try out everything on the website. But I also went through each feature on the website and tried them out myself to find that they all worked to the needs and wants of the user.
 
 1. Playing Simon:
     1. Press start.

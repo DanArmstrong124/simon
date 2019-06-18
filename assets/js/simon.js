@@ -46,6 +46,7 @@ const simonsTurn = document.querySelector("#simons-turn");
 const muteBtn = document.querySelector("#mute-button");
 const feedbackBtn = document.querySelector("#feedback-button");
 const difSelect = document.querySelector("#difficulty");
+const sendTitle = document.querySelector("#form-title-send");
 
 muteBtn.addEventListener('click', function() {
     if (muteToggle == true) {
@@ -147,6 +148,7 @@ startBtn.addEventListener('click', function() {
             firstClick = false;
         }
         scoreForm.classList.remove("visable");
+        sendTitle.classList.remove("visable");
         startBtn.classList.remove("winner-function-margin");
         startBtn.innerHTML = "Retry";
         startBtn.classList.add("hidden");
@@ -473,6 +475,7 @@ function winnerFunction() {
 
 function emailSequence() {
     scoreForm.classList.add("visable");
+    sendTitle.classList.add("visable");
     document.getElementById("turns").setAttribute('value', "turn " + turn);
     document.getElementById("time").setAttribute('value', time + " seconds");
     totalScore = totalScore | 0;
