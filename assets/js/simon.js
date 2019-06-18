@@ -209,7 +209,7 @@ function gameTurn() {
     if (simonTurn) {
         userSimonTurnText();
         clearColor();
-        setTimeout(() => {
+        setTimeout(function() {
             if (simonSequence[colourFlash] == 1) greenSound();
             if (simonSequence[colourFlash] == 2) redSound();
             if (simonSequence[colourFlash] == 3) yellowSound();
@@ -313,7 +313,7 @@ grnBtn.addEventListener('click', function() {
         greenSound();
         colourClicks++;
         if (!gameWon) {
-            setTimeout(() => {
+            setTimeout(function() {
                 clearColor();
             }, 300);
         }
@@ -328,7 +328,7 @@ redBtn.addEventListener('click', function() {
         redSound();
         colourClicks++;
         if (!gameWon) {
-            setTimeout(() => {
+            setTimeout(function() {
                 clearColor();
             }, 300);
         }
@@ -343,7 +343,7 @@ ylwBtn.addEventListener('click', function() {
         yellowSound();
         colourClicks++;
         if (!gameWon) {
-            setTimeout(() => {
+            setTimeout(function() {
                 clearColor();
             }, 300);
         }
@@ -358,7 +358,7 @@ bluBtn.addEventListener('click', function() {
         blueSound();
         colourClicks++;
         if (!gameWon) {
-            setTimeout(() => {
+            setTimeout(function() {
                 clearColor();
             }, 300);
         }
@@ -373,7 +373,7 @@ cynBtn.addEventListener('click', function() {
         cyanSound();
         colourClicks++;
         if (!gameWon) {
-            setTimeout(() => {
+            setTimeout(function() {
                 clearColor();
             }, 300);
         }
@@ -388,7 +388,7 @@ purBtn.addEventListener('click', function() {
         purpleSound();
         colourClicks++;
         if (!gameWon) {
-            setTimeout(() => {
+            setTimeout(function() {
                 clearColor();
             }, 300);
         }
